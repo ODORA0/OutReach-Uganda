@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donor Pitch Deck | Outreach Uganda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles/style.css">
+  <style>
+    body {
+      overflow-y: auto;
+      scroll-snap-type: y mandatory;
+      height: 100vh;
+    }
+    .slide {
+      height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      position: relative;
+    }
+    .slide-content {
+      max-width: 900px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 3rem;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .slide-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.3;
+    }
+    .slide-nav {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 100;
+      background: white;
+      padding: 0.5rem;
+      border-radius: var(--radius-full);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slide-nav">
+    <span style="font-size: 0.8rem; font-weight: bold; color: var(--color-teal);">SCROLL DOWN 👇</span>
+  </div>
+
+  <!-- Slide 1: Title -->
+  <section class="slide bg-teal">
+    <img src="https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?q=80&w=2000&auto=format&fit=crop" class="slide-bg" style="opacity: 0.5;">
+    <div class="slide-content text-center">
+      <h1 class="text-teal">Outreach Uganda</h1>
+      <h2 class="text-clay">Transforming Lives in Makerere–Kivulu</h2>
+      <p style="font-size: 1.5rem;">Empowering the next generation through education, nutrition, and mentorship.</p>
+    </div>
+  </section>
+
+  <!-- Slide 2: The Problem -->
+  <section class="slide bg-pearl">
+    <div class="slide-content">
+      <h2 class="text-clay">The Reality</h2>
+      <ul style="font-size: 1.25rem; line-height: 2; list-style: none;">
+        <li>🚫 <strong>High Dropout Rates:</strong> Families cannot afford basic school fees.</li>
+        <li>🍲 <strong>Food Insecurity:</strong> Many children eat only one meal a day.</li>
+        <li>⚠️ <strong>Unsafe Streets:</strong> Lack of safe play spaces exposes kids to danger.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Slide 3: Our Solution -->
+  <section class="slide bg-white">
+    <div class="slide-content text-center">
+      <h2 class="text-teal">A Holistic Approach</h2>
+      <div class="card-grid" style="margin-top: 2rem;">
+        <div>
+          <div style="font-size: 3rem;">📚</div>
+          <h3>Education</h3>
+        </div>
+        <div>
+          <div style="font-size: 3rem;">🍲</div>
+          <h3>Nutrition</h3>
+        </div>
+        <div>
+          <div style="font-size: 3rem;">❤️</div>
+          <h3>Mentorship</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 4: Impact -->
+  <section class="slide bg-pearl">
+    <div class="slide-content text-center">
+      <h2 class="text-gold">Our Impact So Far</h2>
+      <div class="card-grid" style="margin-top: 2rem;">
+        <div>
+          <h3 style="font-size: 4rem; color: var(--color-clay); margin: 0;">200+</h3>
+          <p>Children Supported</p>
+        </div>
+        <div>
+          <h3 style="font-size: 4rem; color: var(--color-teal); margin: 0;">50+</h3>
+          <p>Back in School</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 5: Funding Needs -->
+  <section class="slide bg-white">
+    <div class="slide-content">
+      <h2 class="text-teal">Funding Goal: $10,000</h2>
+      <p>Your support will fund our operations for the 2024-2025 fiscal year.</p>
+      <div style="margin-top: 2rem; background: #eee; height: 20px; border-radius: 10px; overflow: hidden;">
+        <div style="width: 40%; height: 100%; background: var(--color-clay); float: left;"></div>
+        <div style="width: 30%; height: 100%; background: var(--color-gold); float: left;"></div>
+        <div style="width: 30%; height: 100%; background: var(--color-teal); float: left;"></div>
+      </div>
+      <div style="display: flex; justify-content: space-between; margin-top: 0.5rem; font-size: 0.9rem;">
+        <span><span style="color: var(--color-clay);">●</span> Education (40%)</span>
+        <span><span style="color: var(--color-gold);">●</span> Nutrition (30%)</span>
+        <span><span style="color: var(--color-teal);">●</span> Operations (30%)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slide 6: CTA -->
+  <section class="slide bg-teal">
+    <div class="slide-content text-center">
+      <h2 class="text-clay">Join Us</h2>
+      <p style="font-size: 1.25rem; margin-bottom: 2rem;">Together, we can build a future full of promise.</p>
+      <a href="https://www.gofundme.com/" target="_blank" class="btn btn-gold" style="font-size: 1.5rem; padding: 1rem 3rem;">Donate on GoFundMe</a>
+      <p style="margin-top: 1rem; font-size: 0.9rem;">All donations are securely processed.</p>
+    </div>
+  </section>
+
+</body>
+</html>
