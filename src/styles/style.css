@@ -321,8 +321,29 @@ img {
 /* Footer */
 .footer {
   background-color: var(--color-teal);
+  background-image: url('/images/african-print-footer.png');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
   color: var(--color-white);
   padding: var(--spacing-lg) 0 var(--spacing-md);
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(42, 92, 102, 0.85);
+  z-index: 0;
+}
+
+.footer > * {
+  position: relative;
+  z-index: 1;
 }
 
 .footer-grid {
@@ -464,6 +485,57 @@ img {
   background: var(--color-gold);
   width: 30px;
   border-radius: 6px;
+}
+
+/* African Print Decorative Elements - REMOVED */
+.african-print-accent {
+  position: relative;
+}
+
+.african-print-accent > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Section Dividers - REMOVED */
+.section-divider {
+  height: 2px;
+  background: transparent;
+  margin: var(--spacing-md) 0;
+}
+
+/* Card with African Print Border */
+.card-african {
+  border: 2px solid transparent;
+  background: var(--color-white);
+  background-image: 
+    linear-gradient(white, white),
+    url('/images/african-print-accent.png');
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.card-african:hover {
+  box-shadow: 0 6px 30px rgba(0,0,0,0.12);
+  transform: translateY(-3px);
+}
+
+.card-african::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: url('/images/african-print-accent.png');
+  background-size: 300px;
+  opacity: 0.05;
+  border-radius: var(--radius-lg);
+  z-index: -1;
+  pointer-events: none;
 }
 
 /* Mobile Responsive */
