@@ -29,8 +29,8 @@
 ## Slide 5: Impact So Far
 *   **Headline**: Changing Lives, One Child at a Time
 *   **Stats**:
-    *   **200+** Children Supported
-    *   **5,000+** Meals Served
+    *   **100+** Children Supported
+    *   **500+** Meals Served
     *   **50+** Children Back in School
 *   **Visual**: Infographic with large numbers in "Savanna Gold".
 
