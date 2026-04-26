@@ -73,6 +73,62 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
+  // ==========================================================
+  // Activity Gallery: filter pills + lightbox
+  // ==========================================================
+  const grid = document.getElementById('activity-grid');
+  if (grid) {
+    const cards = Array.from(grid.querySelectorAll('.activity-card'));
+    const pills = document.querySelectorAll('#filter-bar .filter-pill');
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        const filter = pill.dataset.filter;
+        cards.forEach(card => {
+          const match = filter === 'all' || card.dataset.category === filter;
+          card.classList.toggle('is-hidden', !match);
+        });
+      });
+    });
+
+    // Deep-link filter via hash (#feeding, #women, etc.)
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      const target = document.querySelector(`#filter-bar .filter-pill[data-filter="${hash}"]`);
+      if (target) target.click();
+    }
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbCap = document.getElementById('lightbox-caption');
+    const lbClose = document.getElementById('lightbox-close');
+
+    const openLightbox = (card) => {
+      lbImg.src = card.dataset.full;
+      lbImg.alt = card.dataset.title || '';
+      lbCap.innerHTML = `<strong>${card.dataset.title || ''}</strong>${card.dataset.caption || ''}`;
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    };
+
+    cards.forEach(card => card.addEventListener('click', () => openLightbox(card)));
+    lbClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+    });
+  }
+
   // Carousel Functionality
   const carousel = document.querySelector('.carousel-wrapper');
   if (carousel) {

@@ -1,4 +1,4 @@
-/* Outreach Uganda - Global Styles */
+/* Impact Fund - Global Styles */
 
 :root {
   /* Primary Palette */
@@ -320,14 +320,12 @@ img {
 
 /* Footer */
 .footer {
-  background-color: var(--color-teal);
-  background-image: url('/images/african-print-footer.png');
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: overlay;
-  color: var(--color-white);
-  padding: var(--spacing-lg) 0 var(--spacing-md);
   position: relative;
+  color: var(--color-white);
+  padding: calc(var(--spacing-lg) + 14px) 0 var(--spacing-md);
+  background:
+    linear-gradient(rgba(20, 50, 56, 0.92), rgba(20, 50, 56, 0.92)),
+    url('/images/african-print-footer.png') center/cover repeat var(--color-teal);
 }
 
 .footer::before {
@@ -336,15 +334,16 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: rgba(42, 92, 102, 0.85);
-  z-index: 0;
+  height: 8px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-clay) 0 14px,
+    var(--color-gold) 14px 22px,
+    var(--color-teal) 22px 36px
+  );
 }
 
-.footer > * {
-  position: relative;
-  z-index: 1;
-}
+.footer .container { position: relative; z-index: 1; }
 
 .footer-grid {
   display: grid;
@@ -538,6 +537,444 @@ img {
   pointer-events: none;
 }
 
+/* ===========================================================
+   Kente-inspired pattern dividers (pure CSS, no asset needed)
+   =========================================================== */
+.kente-divider {
+  height: 14px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      var(--color-clay) 0 24px,
+      var(--color-gold) 24px 36px,
+      var(--color-teal) 36px 60px,
+      var(--color-pearl) 60px 66px,
+      var(--color-charcoal) 66px 78px
+    );
+  border-top: 2px solid rgba(0,0,0,0.06);
+  border-bottom: 2px solid rgba(0,0,0,0.06);
+}
+
+.kente-thin {
+  height: 6px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-clay) 0 14px,
+    var(--color-gold) 14px 22px,
+    var(--color-teal) 22px 36px
+  );
+}
+
+/* Eyebrow / section label */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-headline);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  color: var(--color-clay);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background: var(--color-gold);
+  vertical-align: middle;
+  margin-right: 0.6rem;
+  border-radius: 2px;
+}
+
+/* ===========================================================
+   Activities Gallery
+   =========================================================== */
+.gallery-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-white);
+  overflow: hidden;
+  padding: var(--spacing-xl) var(--spacing-sm);
+}
+
+.gallery-hero img.gallery-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  border-radius: 0;
+}
+
+.gallery-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(42,92,102,0.85) 0%, rgba(217,119,87,0.55) 100%);
+  z-index: -1;
+}
+
+.gallery-hero h1 { color: var(--color-white); }
+.gallery-hero p {
+  max-width: 720px;
+  margin: 1rem auto 0;
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+/* Filter pills */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.filter-pill {
+  border: 2px solid var(--color-mist);
+  background: var(--color-white);
+  color: var(--color-charcoal);
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-headline);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-pill:hover {
+  border-color: var(--color-clay);
+  color: var(--color-clay);
+}
+
+.filter-pill.active {
+  background: var(--color-teal);
+  border-color: var(--color-teal);
+  color: var(--color-white);
+  box-shadow: 0 4px 14px rgba(42,92,102,0.25);
+}
+
+/* Activity grid (masonry-ish via CSS columns) */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.25rem;
+}
+
+.activity-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--color-charcoal);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  cursor: zoom-in;
+  grid-column: span 4;
+  aspect-ratio: 4 / 5;
+}
+
+.activity-card.span-6 { grid-column: span 6; aspect-ratio: 16 / 11; }
+.activity-card.span-8 { grid-column: span 8; aspect-ratio: 16 / 9; }
+.activity-card.span-12 { grid-column: span 12; aspect-ratio: 21 / 9; }
+
+.activity-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  transition: transform 0.6s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.18);
+}
+
+.activity-card:hover img { transform: scale(1.05); }
+
+.activity-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,0.85) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  color: var(--color-white);
+}
+
+.activity-card .tag {
+  align-self: flex-start;
+  background: var(--color-gold);
+  color: var(--color-charcoal);
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.5rem;
+}
+
+.activity-card h3 {
+  color: var(--color-white);
+  font-size: 1.25rem;
+  margin: 0 0 0.4rem;
+  line-height: 1.25;
+}
+
+.activity-card p {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.92rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.activity-card.is-hidden { display: none; }
+
+/* Activity narrative section (text block between gallery sections) */
+.activity-block {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--spacing-md);
+  align-items: center;
+  margin: var(--spacing-lg) 0;
+}
+
+.activity-block.reverse { grid-template-columns: 1fr 1.1fr; direction: rtl; }
+.activity-block.reverse > * { direction: ltr; }
+
+.activity-block img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.activity-block .text { padding: 1rem 0; }
+
+.activity-block h2 { margin-bottom: 0.75rem; }
+
+/* ===========================================================
+   Lightbox
+   =========================================================== */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 30, 35, 0.94);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 2rem;
+  animation: fadeIn 0.25s ease-out;
+}
+
+.lightbox.is-open { display: flex; }
+
+.lightbox-inner {
+  max-width: min(1100px, 95vw);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.lightbox-caption {
+  color: var(--color-pearl);
+  text-align: center;
+  max-width: 720px;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.lightbox-caption strong {
+  color: var(--color-gold);
+  font-family: var(--font-headline);
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.5px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.lightbox-close:hover { background: var(--color-clay); border-color: var(--color-clay); }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===========================================================
+   Donor-impact banner (used on home + gallery)
+   =========================================================== */
+.donor-banner {
+  background: linear-gradient(135deg, var(--color-teal) 0%, #1a4148 100%);
+  color: var(--color-white);
+  padding: var(--spacing-lg) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.donor-banner::before,
+.donor-banner::after {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.donor-banner::before {
+  top: -100px; left: -80px;
+  background: var(--color-gold);
+}
+
+.donor-banner::after {
+  bottom: -120px; right: -60px;
+  background: var(--color-clay);
+}
+
+.donor-banner > .container { position: relative; z-index: 1; }
+
+.donor-banner h2 { color: var(--color-white); }
+.donor-banner .eyebrow { color: var(--color-gold); }
+
+/* Sponsor tier cards */
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  margin-top: var(--spacing-md);
+}
+
+.tier-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(6px);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: var(--transition-normal);
+}
+
+.tier-card:hover {
+  background: rgba(255,255,255,0.14);
+  transform: translateY(-3px);
+}
+
+.tier-amount {
+  font-family: var(--font-headline);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--color-gold);
+  margin-bottom: 0.25rem;
+}
+
+.tier-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* ===========================================================
+   Hero refinements (for redesigned home)
+   =========================================================== */
+.hero-eyebrow {
+  display: inline-block;
+  background: rgba(242, 201, 76, 0.15);
+  border: 1px solid rgba(242, 201, 76, 0.6);
+  color: var(--color-gold);
+  font-family: var(--font-headline);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1rem;
+}
+
+.hero .hero-content .signature {
+  font-family: var(--font-accent);
+  font-size: 2rem;
+  color: var(--color-gold);
+  margin-top: 1rem;
+}
+
+/* Stat block (for impact ribbons) */
+.stat-ribbon {
+  background: var(--color-pearl);
+  padding: var(--spacing-md) 0;
+  border-top: 4px solid var(--color-gold);
+  border-bottom: 4px solid var(--color-clay);
+}
+
+.stat-ribbon .stat-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--spacing-md);
+  text-align: center;
+}
+
+.stat-ribbon .stat-num {
+  font-family: var(--font-headline);
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+  background: linear-gradient(135deg, var(--color-clay), var(--color-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.stat-ribbon .stat-label {
+  font-family: var(--font-headline);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+  color: var(--color-teal);
+  font-weight: 600;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .nav-links {
@@ -560,6 +997,27 @@ img {
   .mobile-menu-btn {
     display: block;
   }
-  
+
   h1 { font-size: 2.5rem; }
+
+  /* Gallery becomes single column on small screens */
+  .activity-card,
+  .activity-card.span-6,
+  .activity-card.span-8,
+  .activity-card.span-12 {
+    grid-column: span 12;
+    aspect-ratio: 4 / 3;
+  }
+
+  .activity-block,
+  .activity-block.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .activity-card { grid-column: span 6; }
+  .activity-card.span-8 { grid-column: span 12; aspect-ratio: 16 / 9; }
+  .activity-card.span-12 { grid-column: span 12; }
 }

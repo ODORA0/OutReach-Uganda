@@ -1,204 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stories of Impact | Outreach Uganda</title>
+  <title>Activities | Impact Fund</title>
+  <meta name="description"
+    content="Photographs of feeding, schooling, health, and women's programmes run by Impact Fund in Makerere–Kivulu.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@400;500;600&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="./src/styles/style.css">
 </head>
+
 <body>
 
   <nav class="navbar">
     <div class="container nav-container">
-      <a href="/" class="logo"><span style="color: var(--color-clay);">☀</span> Outreach Uganda</a>
+      <a href="/" class="logo"><span style="color: var(--color-clay);">☀</span> Impact Fund</a>
       <button class="mobile-menu-btn">☰</button>
       <ul class="nav-links">
         <li><a href="/" class="nav-link">Home</a></li>
         <li><a href="/about.html" class="nav-link">About Us</a></li>
         <li><a href="/programs.html" class="nav-link">Our Work</a></li>
-        <li><a href="/gallery.html" class="nav-link">Stories</a></li>
+        <li><a href="/gallery.html" class="nav-link">Activities</a></li>
         <li><a href="/get-involved.html" class="nav-link">Get Involved</a></li>
         <li><a href="/donate.html" class="btn btn-primary">Donate Now</a></li>
       </ul>
     </div>
   </nav>
 
-  <header class="section bg-pearl text-center" style="padding-bottom: 2rem;">
-    <div class="container">
-      <h1 class="text-teal">Stories of Hope & Transformation</h1>
-      <p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Behind every number is a name, a face, and a dream. Here is why we do what we do.</p>
+  <header class="gallery-hero">
+    <img src="./images/activities/community-children-lineup.jpg" alt="Children gathered at the Impact Fund centre"
+      class="gallery-hero-bg">
+    <div class="hero-content">
+      <span class="hero-eyebrow">Activities</span>
+      <h1>Photos from Kivulu.</h1>
+      <p>Taken on Sabbath mornings, outreach days, and workshops at Kampala Central SDA Church on Gadaffi Road.</p>
     </div>
   </header>
 
-  <section class="section">
+  <div class="kente-divider" aria-hidden="true"></div>
+
+  <section class="section bg-white" style="padding-top: var(--spacing-md); padding-bottom: var(--spacing-sm);">
     <div class="container">
-      
-      <!-- Impact Context Section -->
-      <div class="bg-white" style="padding: 3rem; border-radius: var(--radius-lg); margin-bottom: 4rem; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
-        <h2 class="text-clay text-center" style="margin-bottom: 2rem;">Why Your Sponsorship Matters</h2>
-        <div class="card-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
-          <div>
-            <h3 class="text-teal">The Reality in Kivulu</h3>
-            <p>In the Makerere–Kivulu slum, many children face the harsh reality of food insecurity, lack of sanitation, and limited access to education. Without intervention, the cycle of poverty continues to the next generation.</p>
-          </div>
-          <div>
-            <h3 class="text-gold">Our Intervention</h3>
-            <p>Outreach Uganda provides a holistic safety net. We don't just pay school fees; we provide mentorship, daily meals, and a safe place to play. We believe in nurturing the <strong>whole child</strong>—mind, body, and spirit.</p>
-          </div>
-        </div>
+      <div class="filter-bar" id="filter-bar">
+        <button class="filter-pill active" data-filter="all">All</button>
+        <button class="filter-pill" data-filter="feeding">Feeding</button>
+        <button class="filter-pill" data-filter="education">Education</button>
+        <button class="filter-pill" data-filter="sabbath">Sabbath Chapel</button>
+        <button class="filter-pill" data-filter="health">Health</button>
+        <button class="filter-pill" data-filter="women">Mothers</button>
+        <button class="filter-pill" data-filter="community">Community</button>
+        <button class="filter-pill" data-filter="cleanup">Cleanup</button>
+        <button class="filter-pill" data-filter="kivulu">Kivulu</button>
       </div>
-
-      <!-- Carousel Section -->
-      <div class="carousel-container">
-        <div class="carousel-wrapper">
-          <!-- Slide 1 -->
-          <div class="carousel-slide">
-            <img src="./images/Children in Classroom.jpg" alt="Children in classroom">
-            <div class="carousel-caption">
-              <h3>Education Transforms Lives</h3>
-              <p>Our classroom programs provide quality education to over 200 children in Makerere–Kivulu.</p>
-            </div>
-          </div>
-          <!-- Slide 2 -->
-          <div class="carousel-slide">
-            <img src="./images/Children Playing Outdoors.jpg" alt="Children playing outdoors">
-            <div class="carousel-caption">
-              <h3>Safe Spaces to Play & Grow</h3>
-              <p>Every child deserves a safe place to be a child, away from the dangers of the streets.</p>
-            </div>
-          </div>
-          <!-- Slide 3 -->
-          <div class="carousel-slide">
-            <img src="./images/Boy writing on notepad.jpg" alt="Boy writing">
-            <div class="carousel-caption">
-              <h3>Homework Support & Tutoring</h3>
-              <p>We provide after-school programs to help children excel academically.</p>
-            </div>
-          </div>
-          <!-- Slide 4 -->
-          <div class="carousel-slide">
-            <img src="./images/Young Boy Writing.jpg" alt="Young boy writing">
-            <div class="carousel-caption">
-              <h3>Building Bright Futures</h3>
-              <p>With your support, these children are writing their own success stories.</p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Navigation Buttons -->
-        <button class="carousel-btn prev">‹</button>
-        <button class="carousel-btn next">›</button>
-        
-        <!-- Indicators -->
-        <div class="carousel-indicators">
-          <button class="carousel-indicator active"></button>
-          <button class="carousel-indicator"></button>
-          <button class="carousel-indicator"></button>
-          <button class="carousel-indicator"></button>
-        </div>
-      </div>
-
-      <h2 class="text-teal text-center" style="margin-bottom: 3rem;">Meet the Children</h2>
-
-      <div class="card-grid">
-        
-        <!-- Story 1 -->
-        <div class="card">
-          <img src="./images/Children in Yellow Shirt.jpg" alt="Sarah smiling in class" class="card-img" style="height: 300px;">
-          <div class="card-content">
-            <h3 class="text-clay">Sarah's Journey to Top of the Class</h3>
-            <p class="text-teal" style="font-family: var(--font-accent); font-size: 1.2rem; margin-bottom: 1rem;">"I want to be a doctor so I can help my community."</p>
-            <p>Two years ago, Sarah (12) was selling maize on the streets to support her siblings. She had dropped out of school and lost hope. When our team met her, we saw a spark.</p>
-            <p>Through our scholarship program, Sarah returned to school. Today, she is not only catching up but leading her class. She has become a role model for other girls in Kivulu.</p>
-            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--color-mist);">
-              <strong>Impact:</strong> Full Tuition & Uniform Support
-            </div>
-          </div>
-        </div>
-
-        <!-- Story 2 -->
-        <div class="card">
-          <img src="./images/Boy in Red Shirt.jpg" alt="David playing soccer" class="card-img" style="height: 300px;">
-          <div class="card-content">
-            <h3 class="text-teal">David Finds a Safe Haven</h3>
-            <p class="text-teal" style="font-family: var(--font-accent); font-size: 1.2rem; margin-bottom: 1rem;">"The center is my safe place. I feel free here."</p>
-            <p>David (10) used to spend his days wandering the dangerous alleys of the slum while his parents looked for work. He was exposed to drugs and violence at a young age.</p>
-            <p>Now, David spends his afternoons at our Community Center. He is the captain of our Under-12 soccer team and is receiving counseling to help him process his trauma. He is learning that he is valuable and loved.</p>
-            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--color-mist);">
-              <strong>Impact:</strong> Mentorship & Safe Play Program
-            </div>
-          </div>
-        </div>
-
-        <!-- Story 3 -->
-        <div class="card">
-          <img src="./images/Boy in Floral Shirt.jpg" alt="Children eating lunch" class="card-img" style="height: 300px;">
-          <div class="card-content">
-            <h3 class="text-gold">Nutrition for Little Moses</h3>
-            <p class="text-teal" style="font-family: var(--font-accent); font-size: 1.2rem; margin-bottom: 1rem;">"Now I am strong enough to play."</p>
-            <p>When we first met Moses (6), he was severely malnourished and too weak to run with the other children. His single mother struggled to provide even one meal a day.</p>
-            <p>Through our daily feeding program, Moses now receives a hot, nutritious lunch every day. The transformation has been physical and emotional—his energy is back, his grades have improved, and his smile lights up the room.</p>
-            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--color-mist);">
-              <strong>Impact:</strong> Daily Feeding Program
-            </div>
-          </div>
-        </div>
-
-        <!-- Story 4 -->
-        <div class="card">
-          <img src="./images/Man in white shirt smiling.jpg" alt="Teenage girl reading" class="card-img" style="height: 300px;">
-          <div class="card-content">
-            <h3 class="text-clay">Grace's University Dream</h3>
-            <p class="text-teal" style="font-family: var(--font-accent); font-size: 1.2rem; margin-bottom: 1rem;">"I will be the first in my family to graduate."</p>
-            <p>Grace (17) is one of our oldest beneficiaries. Growing up in Kivulu, few expected her to make it to high school. But with consistent support, she is now preparing for her national exams.</p>
-            <p>She volunteers on weekends to tutor younger children in the program, giving back the same hope she received.</p>
-            <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--color-mist);">
-              <strong>Impact:</strong> High School Scholarship & Leadership Training
-            </div>
-          </div>
-        </div>
-
-      </div>
-      
-      <div class="text-center" style="margin-top: 4rem;">
-        <h3 style="margin-bottom: 1rem;">Be Part of the Next Story</h3>
-        <a href="/donate.html" class="btn btn-primary" style="font-size: 1.2rem; padding: 1rem 2.5rem;">Sponsor a Child Today</a>
-      </div>
-
     </div>
   </section>
+
+  <section class="section bg-white" style="padding-top: var(--spacing-sm);">
+    <div class="container">
+      <div class="activity-grid" id="activity-grid">
+
+        <article class="activity-card span-8" data-category="feeding"
+          data-full="./images/activities/feeding-bowl-of-hope.jpg" data-title="Sabbath Lunch"
+          data-caption="A girl waits in line for lunch after divine service at the church.">
+          <img src="./images/activities/feeding-bowl-of-hope.jpg"
+            alt="A young girl holding a green bowl on a feeding day">
+          <div class="overlay">
+            <span class="tag">Feeding</span>
+            <h3>Sabbath Lunch</h3>
+          </div>
+        </article>
+
+        <article class="activity-card" data-category="feeding" data-full="./images/activities/feeding-serving-meals.jpg"
+          data-title="Serving lunch"
+          data-caption="Volunteers ladle posho and stew from large pots while a line of children waits.">
+          <img src="./images/activities/feeding-serving-meals.jpg" alt="Volunteers serving hot meals from large pots">
+          <div class="overlay">
+            <span class="tag">Feeding</span>
+            <h3>Serving lunch</h3>
+          </div>
+        </article>
+
+        <article class="activity-card" data-category="feeding"
+          data-full="./images/activities/feeding-meal-under-tree.jpg" data-title="Eating outdoors"
+          data-caption="Children eat in the shade near the children's chapel.">
+          <img src="./images/activities/feeding-meal-under-tree.jpg"
+            alt="Children eating from coloured bowls under a tree">
+          <div class="overlay">
+            <span class="tag">Feeding</span>
+            <h3>Eating outdoors</h3>
+          </div>
+        </article>
+
+        <article class="activity-card" data-category="feeding"
+          data-full="./images/activities/feeding-snacks-on-steps.jpg" data-title="Snack break"
+          data-caption="Children share juice and biscuits between programmes.">
+          <img src="./images/activities/feeding-snacks-on-steps.jpg" alt="Children eating snacks on container steps">
+          <div class="overlay">
+            <span class="tag">Feeding</span>
+            <h3>Snack break</h3>
+          </div>
+        </article>
+
+        <article class="activity-card" data-category="feeding"
+          data-full="./images/activities/feeding-mother-receives-supplies.jpg" data-title="Take-home parcels"
+          data-caption="A mother and her two children collect a take-home food parcel.">
+          <img src="./images/activities/feeding-mother-receives-supplies.jpg"
+            alt="A mother holding food supplies with her two children">
+          <div class="overlay">
+            <span class="tag">Feeding</span>
+            <h3>Take-home parcels</h3>
+          </div>
+        </article>
+
+        <article class="activity-card span-8" data-category="education"
+          data-full="./images/activities/education-books-distribution.jpg" data-title="Books and pens"
+          data-caption="Start-of-term distribution. Exercise books, pens, and small stationery sets — the things a child needs to actually walk into a classroom without being sent back home.">
+          <img src="./images/activities/education-books-distribution.jpg"
+            alt="A teacher distributing exercise books and pens">
+          <div class="overlay">
+            <span class="tag">Education</span>
+            <h3>Books and pens</h3>
+          </div>
+        </article>
+
+        <article class="activity-card" data-category="education"
+          data-full="./images/activities/education-craft-cards.jpg" data-title="Creative arts"
+          data-caption="Children with paper crafts they made during a creative-arts session.">
+          <img src="./images/activities/education-craft-cards.jpg" alt="Children with paper crafts in a hall">
+          <div class="overlay">
+            <span class="tag">Education</span>
+            <h3>Creative arts</h3>
+          </div>
+        </article>
+
+        <article class="activity-card" data-category="education"
+          data-full="./images/activities/education-classroom-quiet.jpg" data-title="Class in session"
+          data-caption="Children listening during a teaching session at the centre.">
+          <img src="./images/activities/education-classroom-quiet.jpg" alt="A row of children listening attentively">
+          <div class="overlay">
+            <span class="tag">Education</span>
+            <h3>Class in session</h3>
+          </div>
+        </article>
+
+        <article class="activity-card span-6" data-category="sabbath"
+          data-full="./images/activities/sabbath-chapel-sermon.jpg" data-title="Sabbath children's chapel"
+          data-caption="A pastor leads the Sabbath morning message at the children's chapel.">
+          <img src="./images/activities/sabbath-chapel-sermon.jpg" alt="Pastor teaching children with a projector">
+          <div class="overlay">
+            <span class="tag">Sabbath Chapel</span>
+            <h3>Sabbath children's chapel</h3>
+          </div>
+        </article>
+
+        <article class="activity-card span-6" data-category="sabbath"
+          data-full="./images/activities/sabbath-chapel-blue-room.jpg" data-title="The blue room"
+          data-caption="One of the children's teachers, Tr. Faridah, leads the small-group Sabbath lesson in the children's chapel.">
+          <img src="./images/activities/sabbath-chapel-blue-room.jpg"
+            alt="A teacher with children in a blue-walled hall">
+          <div class="overlay">
+            <span class="tag">Sabbath Chapel</span>
+            <h3>The blue room</h3>
+          </div>
+        </article>
+
+        <article class="activity-card span-6" data-category="health"
+          data-full="./images/activities/health-medical-camp.jpg" data-title="Medical camp"
+          data-caption="One of the activities is to run free medical outreaches in Kivulu — basic check-ups, malaria treatment, and medicines.">
+          <img src="./images/activities/health-medical-camp.jpg" alt="Nurses serving patients at a medical outreach">
+          <div class="overlay">
+            <span class="tag">Health</span>
+            <h3>Medical camp</h3>
+          </div>
+        </article>
+
+        <article class="activity-card span-6" data-category="health"
+          data-full="./images/activities/health-camp-setup.jpg" data-title="Camp setup"
+          data-caption="Tents go up in the morning before patients arrive.">
+          <img src="./images/activities/health-camp-setup.jpg" alt="Tents being set up for a medical outreach camp">
+          <div class="overlay">
+            <span class="tag">Health</span>
+            <h3>Camp setup</h3>
+          </div>
+        </article>
+
+        <article class="activity-card span-8" data-category="women"
+          data-full="./images/activities/women-pad-sewing-circle.jpg" data-title="Pad-sewing workshop"
+          data-caption="A workshop on making reusable sanitary pads. The mothers leave with the pads, the patterns to keep making them, and a small sewing kit. And essential to help their adoloscent childrens given the price of pads for girls.">
+          <img src="./images/activities/women-pad-sewing-circle.jpg" alt="Mothers sewing reusable sanitary pads">
+          <div class="overlay">
+            <span class="tag">Mothers</span>
+            <h3>Pad-sewing workshop</h3>
+          </div>
+        </article>
+
+        <article class="activity-card" data-category="women"
+          data-full="./images/activities/women-pad-workshop-mixed.jpg" data-title="Mixed workshop"
+          data-caption="Fathers and mothers learn pad-making side by side.">
+          <img src="./images/activities/women-pad-workshop-mixed.jpg" alt="Adults sewing reusable pads in a workshop">
+          <div class="overlay">
+            <span class="tag">Mothers</span>
+            <h3>Mixed workshop</h3>
+          </div>
+        </article>
+
+        <article class="activity-card" data-category="women" data-full="./images/activities/women-empowerment-gifts.jpg"
+          data-title="Care packages"
+          data-caption="Mothers receive parcels of household supplies at the close of an outreach day.">
+          <img src="./images/activities/women-empowerment-gifts.jpg" alt="Mothers holding care package items">
+          <div class="overlay">
+            <span class="tag">Mothers</span>
+            <h3>Care packages</h3>
+          </div>
+        </article>
+
+        <article class="activity-card span-8" data-category="community"
+          data-full="./images/activities/community-indoor-gathering.jpg" data-title="Community day"
+          data-caption="A community gathering at the centre — music, teaching, and a shared meal.">
+          <img src="./images/activities/community-indoor-gathering.jpg"
+            alt="Hall filled with children and families on a community day">
+          <div class="overlay">
+            <span class="tag">Community</span>
+            <h3>Community day</h3>
+          </div>
+        </article>
+
+        <article class="activity-card" data-category="community"
+          data-full="./images/activities/community-bible-mural.jpg" data-title="Outside the chapel"
+          data-caption="Lunch is really important for these kids to build and grow in health as such sabbath becomes a special day for them too for this.">
+          <img src="./images/activities/community-bible-mural.jpg" alt="Children gathered outside the centre">
+          <div class="overlay">
+            <span class="tag">Community</span>
+            <h3>Outside the chapel</h3>
+          </div>
+        </article>
+
+        <article class="activity-card" data-category="community"
+          data-full="./images/activities/community-children-lineup.jpg" data-title="Lunch is served"
+          data-caption="Children lined up early in the morning before the day's programme begins.">
+          <img src="./images/activities/community-children-lineup.jpg"
+            alt="Children lined up in the morning at the centre">
+          <div class="overlay">
+            <span class="tag">Community</span>
+            <h3>Lunch is served</h3>
+          </div>
+        </article>
+
+        <article class="activity-card" data-category="community"
+          data-full="./images/activities/community-yellow-tshirt-camp.jpg" data-title="Holiday camp"
+          data-caption="Children in matching shirts during a holiday camp.">
+          <img src="./images/activities/community-yellow-tshirt-camp.jpg" alt="Children in matching yellow t-shirts">
+          <div class="overlay">
+            <span class="tag">Community</span>
+            <h3>Holiday camp</h3>
+          </div>
+        </article>
+
+        <article class="activity-card span-6" data-category="cleanup"
+          data-full="./images/activities/cleanup-sweeping-slum.jpg" data-title="Street cleanup"
+          data-caption="Children and volunteers clearing rubbish from the lanes of Kivulu.">
+          <img src="./images/activities/cleanup-sweeping-slum.jpg" alt="Children sweeping the streets of Kivulu">
+          <div class="overlay">
+            <span class="tag">Cleanup</span>
+            <h3>Street cleanup</h3>
+          </div>
+        </article>
+
+        <article class="activity-card span-6" data-category="cleanup"
+          data-full="./images/activities/cleanup-team-photo.jpg" data-title="Community Service"
+          data-caption="The team with some of the community children after a sunday morning cleanup.">
+          <img src="./images/activities/cleanup-team-photo.jpg"
+            alt="Group photo of the cleanup volunteers and children">
+          <div class="overlay">
+            <span class="tag">Cleanup</span>
+            <h3>Cleanup team</h3>
+          </div>
+        </article>
+
+        <article class="activity-card span-12" data-category="kivulu" data-full="./images/activities/kivulu-streets.jpg"
+          data-title="Kivulu"
+          data-caption="Two girls walking through the lanes of Makerere–Kivulu, the slum next to the church. Most of the children we serve walk to us through streets like this every Sabbath as we meet some of heir parents or guardians.">
+          <img src="./images/activities/kivulu-streets.jpg" alt="Two girls walking through the streets of Kivulu">
+          <div class="overlay">
+            <span class="tag">Kivulu</span>
+            <h3>Kivulu</h3>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="donor-banner">
+    <div class="container text-center">
+      <h2>Support the work.</h2>
+      <p style="max-width: 600px; margin: 0.5rem auto 1.5rem; opacity: 0.9;">Donations go to Sabbath feeding, school
+        fees, the mothers' workshop, and the medical camps. Processed through GoFundMe.</p>
+      <a href="/donate.html" class="btn btn-primary" style="font-size: 1.05rem; padding: 0.9rem 2.25rem;">Donate</a>
+    </div>
+  </section>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+    <div class="lightbox-inner">
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
 
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div>
-          <h4>Outreach Uganda</h4>
-          <p>Empowering the next generation in Makerere–Kivulu.</p>
+          <h4>Impact Fund</h4>
+          <p>Working with families in Makerere–Kivulu, Kampala.</p>
         </div>
         <div>
           <h4>Quick Links</h4>
           <ul class="footer-links">
             <li><a href="/about.html">About Us</a></li>
-            <li><a href="/programs.html">Our Programs</a></li>
+            <li><a href="/programs.html">Our Work</a></li>
+            <li><a href="/gallery.html">Activities</a></li>
             <li><a href="/donate.html">Donate</a></li>
             <li><a href="/contact.html">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h4>Contact Us</h4>
-          <p>Makerere–Kivulu, Kampala</p>
-          <p>Email: info@outreachuganda.org</p>
+          <h4>Contact</h4>
+          <p>Kampala Central SDA Church<br>Gadaffi Road, Makerere, Kampala</p>
+          <p>info@outreachuganda.org</p>
         </div>
       </div>
-      <div class="text-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; font-size: 0.9rem;">
-        <p>&copy; 2024 Outreach Uganda. All rights reserved.</p>
+      <div class="text-center"
+        style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; font-size: 0.9rem;">
+        <p>&copy; 2026 Impact Fund</p>
       </div>
     </div>
   </footer>
 
   <script type="module" src="./src/scripts/main.js"></script>
 </body>
+
 </html>
