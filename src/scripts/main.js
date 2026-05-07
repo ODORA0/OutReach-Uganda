@@ -107,7 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const lbClose = document.getElementById('lightbox-close');
 
     const openLightbox = (card) => {
-      lbImg.src = card.dataset.full;
+      const cardImg = card.querySelector('img');
+      lbImg.src = cardImg ? cardImg.currentSrc || cardImg.src : card.dataset.full;
       lbImg.alt = card.dataset.title || '';
       lbCap.innerHTML = `<strong>${card.dataset.title || ''}</strong>${card.dataset.caption || ''}`;
       lightbox.classList.add('is-open');
